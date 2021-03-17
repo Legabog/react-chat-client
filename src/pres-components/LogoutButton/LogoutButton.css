@@ -1,0 +1,16 @@
+.logout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5px;
+  width: 5%;
+}
+
+.logout-button:hover {
+  cursor: pointer;
+}
+
+.logout-button:active {
+  cursor: pointer;
+  transform: scale(0.95);
+}

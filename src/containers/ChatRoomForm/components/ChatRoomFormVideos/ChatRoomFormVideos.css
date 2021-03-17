@@ -1,0 +1,20 @@
+.chat-room-video {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 78vh;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.chat-room-video::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 2px;
+}
+
+.chat-room-video::-webkit-scrollbar-thumb {
+  height: 15px;
+  background: #202225;
+  border-radius: 2px;
+}

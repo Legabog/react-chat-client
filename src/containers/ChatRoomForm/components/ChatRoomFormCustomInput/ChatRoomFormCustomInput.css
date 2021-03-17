@@ -1,0 +1,61 @@
+.chat-room-custom-input-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #292B2F;
+  min-height: 55px;
+}
+
+.chat-room-custom-input {
+  display: flex;
+  width: 95%;
+  background-color: #40444B;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.chat-room-custom-input > input {
+  width: 100%;
+  border: none;
+  height: 40px;
+  line-height: 1.375rem;
+  font-weight: 400;
+  background-color: transparent;
+  outline-width: 0; 
+  color: #dcddde;
+}
+
+.chat-room-custom-input__smile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.chat-room-custom-input__smile-icon:hover {
+  cursor: pointer;
+  filter: opacity(80%);
+}
+
+.chat-room-custom-input__smile-icon:active {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+.chat-room-custom-input__send-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.chat-room-custom-input__send-icon:hover {
+  cursor: pointer;
+  filter: opacity(80%);
+}
+
+.chat-room-custom-input__send-icon:active {
+  cursor: pointer;
+  transform: scale(0.95);
+}

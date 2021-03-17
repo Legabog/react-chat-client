@@ -1,0 +1,13 @@
+.chat-room-form-wrapper {
+  margin: 0;
+}
+
+.chat-room-form {
+  width: 95vw;
+  color: #72767d;
+  background: #36393F;
+  font-size: 18px;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 20%);
+  border-radius: 5px;
+  box-sizing: border-box;
+}

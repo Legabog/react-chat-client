@@ -1,0 +1,13 @@
+.right-side-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 44px;
+  background-color: #36393F;
+  border-bottom: 1px solid #2F3237;
+}
+
+.right-side-header > span {
+  padding-left: 20px;
+  width: 95%;
+}

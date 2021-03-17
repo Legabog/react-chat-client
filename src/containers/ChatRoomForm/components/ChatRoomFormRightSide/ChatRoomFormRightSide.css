@@ -1,0 +1,9 @@
+.user-list-right-side-wrapper {
+  display: flex;
+  width: 80%;
+}
+
+.user-list-right-side {
+  display: block;
+  width: 100%;
+}

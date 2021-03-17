@@ -1,0 +1,41 @@
+.input-wrapper {
+  margin-bottom: 20px;
+}
+
+.input-wrapper > h5 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  flex: 1;
+  cursor: default;
+  text-align: left;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  
+}
+
+.input > input {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  height: 40px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  color: #dcddde;
+  background-color: rgba(0,0,0,0.1);
+  border: 1px solid;
+  transition: border-color .2s ease-in-out;
+  outline: 0;
+}
+
+.input > input::placeholder {
+  font-weight: 400;
+}
