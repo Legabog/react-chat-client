@@ -14,6 +14,11 @@ const ChatRoomFormVideo = (props) => {
     width: window.innerWidth / 2,
   };
 
+  navigator.getUserMedia =
+    navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia;
+
   useEffect(() => {
     // Ask user to on video camera
     navigator.mediaDevices
@@ -25,10 +30,7 @@ const ChatRoomFormVideo = (props) => {
         socket.on("room:create_peers", (users) => {
           const peers = [];
           users.forEach((userID) => {
-            if (
-              userID !== socket.id &&
-              !_.find(peers, ["peerID", userID])
-            ) {
+            if (userID !== socket.id && !_.find(peers, ["peerID", userID])) {
               const peer = createPeer(userID, socket.id, stream);
               peersRef.current.push({
                 peerID: userID,
@@ -55,7 +57,7 @@ const ChatRoomFormVideo = (props) => {
           };
 
           if (!_.find(props.videoPeers, ["peerID", payload.callerID])) {
-            props.newVideoPeer(peerObj)
+            props.newVideoPeer(peerObj);
           }
         });
 
@@ -76,7 +78,7 @@ const ChatRoomFormVideo = (props) => {
           item.peer.signal(payload.signal);
         });
       });
-       // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
 
   function createPeer(userToSignal, callerID, stream) {

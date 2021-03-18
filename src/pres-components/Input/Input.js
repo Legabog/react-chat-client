@@ -1,6 +1,13 @@
 import "./Input.css";
 
 const Input = (props) => {
+
+  const keydownClickHandler = (e) => {
+    if (e.keyCode === 13) {
+      props.loginButtonSignInHandler()
+    }
+  }
+
   return (
     <div className="input-wrapper">
       <h5
@@ -24,6 +31,7 @@ const Input = (props) => {
           onChange={props.changeHandler}
           onFocus={props.focusHandler}
           onBlur={props.blurHandler}
+          onKeyDown={keydownClickHandler}
           style={{
             borderColor:
               props.errorMessage.split("").length !== 0

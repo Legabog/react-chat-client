@@ -31,6 +31,12 @@ const ChatRoomFormCustomInput = (props) => {
     chatTextSetValue("");
   };
 
+  const keydownClickHandler = (e) => {
+    if (e.keyCode === 13) {
+      clickHandler();
+    }
+  };
+
   return (
     <div className="chat-room-custom-input-wrapper">
       <div
@@ -52,6 +58,7 @@ const ChatRoomFormCustomInput = (props) => {
           onChange={chatTextChangeHandler}
           onFocus={chatTextFocusHandler}
           onBlur={chatTextBlurHandler}
+          onKeyDown={keydownClickHandler}
         />
         <div className="chat-room-custom-input__send-icon">
           <SendIcon onClick={clickHandler} />

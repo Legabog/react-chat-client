@@ -51,7 +51,6 @@ const LoginForm = (props) => {
   };
 
   const loginButtonSignInHandler = (e) => {
-    e.preventDefault();
     if (resultValidation()) {
       props.onLogin(room, nickname, history);
       setRoomError("");
@@ -76,6 +75,7 @@ const LoginForm = (props) => {
           changeHandler={roomChangeHandler}
           focusHandler={roomFocusHandler}
           blurHandler={roomBlurHandler}
+          loginButtonSignInHandler={loginButtonSignInHandler}
           errorMessage={roomError}
         />
         <Input
@@ -89,6 +89,7 @@ const LoginForm = (props) => {
           focusHandler={nicknameFocusHandler}
           blurHandler={nicknameBlurHandler}
           errorMessage={nicknameError}
+          loginButtonSignInHandler={loginButtonSignInHandler}
         />
         <Button
           label="Вход"
