@@ -1,12 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import "./LogoutButton.css";
 
 const LogoutButton = (props) => {
+  const history = useHistory();
+
   const clickHandler = (e) => {
     e.preventDefault();
+    history.push("/");
     props.onLogout();
-    window.location.reload()
   };
 
   return (
